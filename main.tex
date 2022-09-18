@@ -1,0 +1,147 @@
+\documentclass[10pt]{beamer}
+\usepackage[utf8]{inputenc}
+
+\usepackage{multirow,rotating}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage{tikz-cd}
+\usepackage{array}
+\usepackage{siunitx}
+\usepackage{mathtools,nccmath}%
+\usepackage{etoolbox, xparse} 
+\usepackage[spanish]{babel}
+\usetheme{CambridgeUS}
+\usecolortheme{dolphin}
+
+% set colors
+\definecolor{myNewColorA}{RGB}{2, 100, 166}
+\definecolor{myNewColorB}{RGB}{151, 201, 61}
+\definecolor{myNewColorC}{RGB}{39, 122, 179} % {130,138,143}
+\setbeamercolor*{palette primary}{bg=myNewColorC, fg = white}
+\setbeamercolor*{palette secondary}{bg=myNewColorB, fg = black}
+\setbeamercolor*{palette tertiary}{bg=myNewColorA, fg = white}
+\setbeamercolor*{titlelike}{fg=myNewColorA}
+\setbeamercolor*{title}{bg=myNewColorA, fg = white}
+\setbeamercolor*{item}{fg=myNewColorA}
+\setbeamercolor*{caption name}{fg=myNewColorA}
+\usefonttheme{professionalfonts}
+\usepackage{natbib}
+\usepackage{hyperref}
+%------------------------------------------------------------
+% \titlegraphic{\includegraphics[height=0.75cm]{ua_eng_logo.png}} 
+
+% logo of my university
+
+
+\titlegraphic{%
+\includegraphics[width=3.0cm]{itsm_tecnm_isc_logo.png}
+}
+
+\setbeamerfont{title}{size=\large}
+\setbeamerfont{subtitle}{size=\small}
+\setbeamerfont{author}{size=\small}
+\setbeamerfont{date}{size=\footnotesize}
+\setbeamerfont{institute}{size=\footnotesize}
+
+\title{Introducción a la programación competitiva}%title
+\subtitle{Gu\'ia b\'asica de algoritmos, C++ y sus librerias}%%subtitle
+\author{Antonio Reyna Espinoza}%%authors
+
+\institute[ITSM]{Instituto Tecnol\'ogico Superior de El Mante}
+\date[\textcolor{white}{\today}]
+{Taller de programación competitiva \\
+\today}
+
+%------------------------------------------------------------
+%This block of commands puts the table of contents at the 
+%beginning of each section and highlights the current section:
+%\AtBeginSection[]
+%{
+%  \begin{frame}
+%    \frametitle{Contents}
+%    \tableofcontents[currentsection]
+%  \end{frame}
+%}
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
+% ------Contents below------
+%------------------------------------------------------------
+
+\begin{document}
+
+%The next statement creates the title page.
+\frame{\titlepage}
+\begin{frame}
+  \frametitle{Tabla de contenidos}
+  \tableofcontents
+\end{frame}
+
+
+% consider removing it if it's too redundant
+% \AtBeginSection[]
+% {
+% \begin{frame}
+% \frametitle{Tabla de contenidos}
+% \tableofcontents[currentsection]
+% \end{frame}
+% }
+
+%------------------------------------------------------------
+\section{Introducción}
+
+\subsection*{¿Qui\'en soy?}
+\begin{frame}
+  \frametitle{¿Qui\'en soy?}
+  \begin{columns}
+    \column{0.5\textwidth}
+    \begin{tikzpicture}[remember picture, overlay]
+      \clip (3, 0) circle (2cm) node {\includegraphics[height=6cm]{me.jpeg}};
+    \end{tikzpicture}
+    \column{0.5\textwidth}
+    Soy un estudiante de séptimo semestre de la carrera de Ingeniería en sistemas computacionales y entusiasta de la programación competitiva.
+  \end{columns}
+\end{frame}
+
+\note<>[]{Hola}
+\subsection*{¿Qu\'e es programación competitiva?}
+\begin{frame}{¿Que es programación competitiva?}
+  La programación competitiva combina dos temas: el dise\~no de algoritmos y la implementaci\'on de algoritmos.
+
+  \vfill
+
+  \begin{columns}
+    \column{0.5\textwidth}
+    \textbf{Diseño de Algoritmos} Es el núcleo de la programación competitiva, consiste en inventar algoritmos eficientes que resuelven problemas computacionales bien definidos. A menudo, una solución a un problema es una combinación de métodos bien conocidos y nuevos conocimientos.
+
+    \column{0.5\textwidth}
+    \textbf{Implementación de algoritmos} En la programación competitiva, las soluciones a los problemas se evalúan probando un algoritmo implementado utilizando un conjunto de casos de prueba. Por lo tanto, después de idear un algoritmo que resuelva el problema, el siguiente paso es implementarlo correctamente.
+  \end{columns}
+\end{frame}
+
+
+\section{Conclusion}
+\begin{frame}{Conclusion}
+\end{frame}
+
+\section*{Acknowledgement}
+\begin{frame}
+
+  \textcolor{myNewColorA}{\huge{\centerline{Thank you!}}}
+  \vspace*{0.5cm}
+
+  \textcolor{myNewColorA}{\Large{\centerline{E-mail: YourBamaID@crimson.ua.edu}}}
+
+\end{frame}
+
+\end{document}
+
+
+
